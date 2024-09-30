@@ -6,12 +6,7 @@ h1{
     text-align: center; 
     color:#7fffd4; 
 }
-h2{
-    color:green; 
-}
-.about{
-    color:brown; 
-}
+
 .projects { 
     display:flex; 
     flex-wrap:wrap; 
@@ -26,10 +21,4 @@ border-radius: 25%;
 .skills{
     color:chocolate; 
 
-}
-.projects{
-    color:turquoise; 
-}
-.contact{
-    color:moccasin; 
 }
