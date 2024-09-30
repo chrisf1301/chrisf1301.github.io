@@ -12,12 +12,6 @@ h2{
 .about{
     color:brown; 
 }
-.project img{
-    width: 800px;
-    height: 300px;
-    margin: 10px;
-    border: 2px solid rgb(126, 14, 201);
-}
 .projects { 
     display:flex; 
     flex-wrap:wrap; 
