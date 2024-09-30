@@ -20,6 +20,17 @@ h2{
     display: block;
     margin: auto;
 }
+.projects { 
+    display:flex; 
+    flex-wrap:wrap; 
+} 
+.project {
+width: 30%;
+margin: 10px;
+padding: 20px 10px;
+background: rgb(197, 13, 13); /* pick a color */
+border-radius: 25%;
+}
 .skills{
     color:chocolate; 
 
