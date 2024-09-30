@@ -17,8 +17,6 @@ h2{
     height: 300px;
     margin: 10px;
     border: 2px solid rgb(126, 14, 201);
-    display: block;
-    margin: auto;
 }
 .projects { 
     display:flex; 
