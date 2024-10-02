@@ -1,10 +1,10 @@
 body{
-    background-color: indigo;
+    background-color: rgb(24, 167, 192);
     font-family: Arial, Helvetica, sans-serif; 
 }
 h1{
     text-align: center; 
-    color:#7fffd4; 
+    color:#000403; 
 }
 
 .projects { 
@@ -15,10 +15,28 @@ h1{
 width: 30%;
 margin: 10px;
 padding: 20px 10px;
-background: rgb(197, 13, 13); /* pick a color */
+background: rgb(213, 89, 6); /* pick a color */
 border-radius: 25%;
 }
+.project img{
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    border: 2px solid rgb(230, 147, 22); /* choose a color */
+    display: block;
+    margin: auto;
+    }
+    
 .skills{
-    color:chocolate; 
+    color:rgb(0, 0, 0); 
 
 }
+a { /* change the appearance of ALL links */
+    text-align: center;
+    text-decoration: none;
+    color: rgb(24, 167, 192);
+    }
+    .project p { /* change the appearance of paragraph tags inside .project divs */
+    text-align: center;
+    margin: 15px;
+    }
