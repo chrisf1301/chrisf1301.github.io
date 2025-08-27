@@ -1,0 +1,40 @@
+/* Structure */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background:url("images/alpha_wolf.jpg");
+    /*background-size:cover; if u want whole pages*/ 
+}
+
+div{
+    background: skyblue; 
+    width:70%; 
+    margin:auto; /*center*/
+    padding:1%; /* get text away from edge */
+    border-radius:5px; /* round corners */
+}
+/* Tables */
+table{
+    border-collapse: collapse;
+}
+td, th {
+    border: 1px solid magenta;
+    padding:5px 10px; /*top and bottom 5, right and left 10 */
+    
+}
+th{
+    background: magenta; 
+    
+}
+/*images*/
+#giraffe-pic{
+    box-shadow: 7px 7px navy; 
+}
+
+/* Typography */
+h1 {
+    color:crimson;
+}
+
+h2 {
+    color:aqua; 
+}

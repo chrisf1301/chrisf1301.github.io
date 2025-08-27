@@ -1,0 +1,22 @@
+/* Structure */
+body{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: darkcyan;
+    color: whitesmoke; 
+}
+
+/* Main Content */
+#content{
+    background: beige; 
+    width: 70%; 
+    margin: auto; 
+    padding: 1%; 
+    border-radius: 5px; 
+}
+
+/* Links */
+a{
+    text-decoration: none;
+    color:darkgoldenrod; 
+}
+
