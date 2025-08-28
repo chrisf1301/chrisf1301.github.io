@@ -1,8 +1,13 @@
 /* Structure */
 body{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: darkcyan;
-    color: whitesmoke; 
+    color: rgb(38, 13, 164); 
+    background:url("images/phily.jpeg");
+    background-size:cover;
+    background-position: center;
+    margin:0;
+    padding:0; 
+
 }
 
 /* Main Content */
@@ -11,12 +16,17 @@ body{
     width: 70%; 
     margin: auto; 
     padding: 1%; 
-    border-radius: 5px; 
+    background: rgba(255, 255, 255, 0.679); 
+    border: 2px solid #333; 
+    border-radius: 10px; 
 }
 
 /* Links */
 a{
     text-decoration: none;
     color:darkgoldenrod; 
+    
 }
+
+
 
