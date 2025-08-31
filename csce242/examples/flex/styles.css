@@ -1,0 +1,92 @@
+body{
+    background:#558C03; /*when not at certain size it will be this color */ 
+    font-family: Arial, Helvetica, sans-serif; 
+}
+#content {
+    width:95%; 
+    margin:auto; 
+    background:rgba(255,255,255,0.7); 
+    border-radius:5px; 
+    padding:5px; 
+}
+#main-header{
+    background-color: #558C03;
+    color:white; 
+    border-radius:5px; 
+    padding:5px; 
+}
+
+
+
+/* Main Navigation */ 
+
+#main-nav ul{
+    list-style-type: none; /*removes the bullets */ 
+    padding-left: 0;
+
+}
+#main-nav li{
+    border-bottom: 1px solid white;
+}
+#main-nav li:first-child{
+    border-top: 1px solid white;
+}
+
+
+#main-nav a{
+    color:white; 
+    padding:5x; 
+    display:block; 
+    text-decoration: none; /*removes the underlines*/
+}
+#main-nav a:hover {
+    background: white;
+    color:#558C03; 
+}
+
+
+/* Typography */
+h1{
+    text-align: center;
+}
+
+
+
+
+
+/* Larger devices (thats when it is used) */
+@media only screen and (min-width: 768px){
+    body{
+        background-image: url(images/tree.jpeg);
+        background-size:cover; 
+    }
+    #content{
+        width:70%; 
+    }
+    /* columns */ 
+    .columns{  
+        display:flex; 
+    
+    }
+
+    /* Main Nav */
+    #main-nav li{
+        flex:1; 
+    }
+    #main-nav li, #main-nav li:first-child{
+        border:none; 
+    }
+    #main-nav a{
+        text-align:center; 
+        padding: 5px; 
+    }
+    #main-nav a:hover{
+        background:#558C03; 
+        color:white; 
+        border-bottom:1px solid white; 
+    }
+
+}
+
+
+

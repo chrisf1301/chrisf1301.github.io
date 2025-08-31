@@ -1,32 +1,137 @@
 /* Structure */
 body{
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: rgb(38, 13, 164); 
-    background:url("images/phily.jpeg");
-    background-size:cover;
-    background-position: center;
+    background:#558C03; /*certain color when at certain size */ 
+    font-family: Arial, Helvetica, sans-serif; 
     margin:0;
-    padding:0; 
-
+    padding:0;
 }
 
-/* Main Content */
-#content{
-    background: beige; 
-    width: 70%; 
-    margin: auto; 
-    padding: 1%; 
-    background: rgba(255, 255, 255, 0.679); 
-    border: 2px solid #333; 
-    border-radius: 10px; 
+#content {
+    width:95%; 
+    margin:auto; 
+    background:rgba(255,255,255,0.85); 
+    border-radius:5px; 
+    padding:15px; 
 }
 
-/* Links */
-a{
-    text-decoration: none;
-    color:darkgoldenrod; 
-    
+#main-header{
+    background-color: #558C03;
+    color:white; 
+    border-radius:5px; 
+    padding:5px; 
 }
 
+/* Main Navigation */ 
+#main-nav ul{
+    list-style-type: none; /*takes away the bullets */ 
+    padding-left: 0;
+    margin: 0;
+}
+#main-nav li{
+    border-bottom: 1px solid white;
+}
+#main-nav li:first-child{
+    border-top: 1px solid white;
+}
+#main-nav a{
+    color:white; 
+    padding:5px; 
+    display:block; 
+    text-decoration: none; /*removes the underlines*/
+}
+#main-nav a:hover {
+    background: white;
+    color:#558C03; 
+}
+
+/* Typography */
+h1{
+    text-align: center;
+    color: #2E4600;
+}
+h4 {
+    text-align: center;
+    color: #333;
+}
+
+/* Assignments Section */
+.columns {
+    display: flex;
+    justify-content: center;
+    gap: 20px;        /* gives the space between the cards */
+    flex-wrap: wrap;  /* lets them wrap if screen is smaller */
+    margin-top: 20px;
+}
+
+.assignment {
+    background: #E6ECF8;       
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    width: 300px;              
+    text-align: center;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.15);
+}
+
+.assignment h3 {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.assignment img {
+    width: 300px;
+    height: 150px;
+    object-fit: cover; /* keeps image scaled */
+    background: #bbb;  /* placeholder if no image */
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.assignment p {
+    font-size: 0.9em;
+    color: #333;
+    margin: 0;
+}
+
+/* Larger devices */
+@media only screen and (min-width: 768px){
+    body{
+        background-image: url(images/pro_image.jpeg);
+        background-size:cover; 
+    }
+    #content{
+        width:70%; 
+    }
+
+    .columns{  
+        display:flex; 
+    }
+
+    /* Main Nav */
+    #main-nav li{
+        flex:1; 
+        border:none;
+    }
+    #main-nav a{
+        text-align:center; 
+        padding: 5px; 
+    }
+    #main-nav a:hover{
+        background:#558C03; 
+        color:white; 
+        border-bottom:1px solid white; 
+    }
+}
+
+/* Small devices (stack vertically) */
+@media only screen and (max-width: 767px) {
+    .columns {
+        flex-direction: column;
+        align-items: center;
+    }
+    .assignment {
+        width: 90%;
+    }
+}
 
 
