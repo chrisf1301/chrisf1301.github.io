@@ -28,8 +28,8 @@ body {
 
 #main-nav li {
     flex:1;
-    background:#336699; /* new box color */
-    margin:2px; /* space between boxes */
+    background:#336699; /* nav box color */
+    margin:2px;
     border-radius:3px;
 }
 
@@ -156,7 +156,7 @@ img {
 
 #main-footer a {
     color:white;
-    text-decoration:underline; /* underline footer link */
+    text-decoration:underline;
 }
 
 /* Large screens */
@@ -207,6 +207,15 @@ img {
 
 /* Small screens */
 @media only screen and (max-width:767px) {
+    /* Nav becomes vertical */
+    #main-nav ul {
+        display:block;
+    }
+
+    #main-nav li {
+        margin:5px 0;
+    }
+
     /* Top ideas: one idea per row */
     #top-ideas {
         display:block;
