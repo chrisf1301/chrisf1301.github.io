@@ -1,0 +1,243 @@
+body {
+    background:#4F5902;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#content {
+    width:95%;
+    margin:auto;
+    background:rgba(255,255,255,0.7);
+    border-radius:5px;
+    padding:5px;
+}
+
+#main-header {
+    background:#4F5902;
+    color:white;
+    border-radius:5px;
+    padding:5px;
+}
+
+/* Navigation */
+#main-nav ul {
+    list-style-type: none;
+    padding-left:0;
+    margin:0;
+    display:flex;
+}
+
+#main-nav li {
+    flex:1;
+    background:#336699; /* new box color */
+    margin:2px; /* space between boxes */
+    border-radius:3px;
+}
+
+#main-nav a {
+    color:white;
+    padding:10px;
+    display:block;
+    text-decoration:none;
+    text-align:center;
+    font-weight:bold;
+}
+
+#main-nav a:hover {
+    background:#fff;
+    color:#336699;
+}
+
+/* Typography */
+h1 {
+    text-align:center;
+}
+
+img {
+    max-width:100%;
+}
+
+/* Top Ideas (2x2 grid with blank) */
+#top-ideas {
+    margin:20px 0;
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.idea {
+    background:#f5f5dc;
+    padding:10px;
+    border-radius:5px;
+    flex:1 1 calc(50% - 20px);
+    box-sizing:border-box;
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.idea-img img {
+    width:200px;
+    height:400px;
+    object-fit:cover;
+    border-radius:5px;
+}
+
+.idea-text {
+    flex:2;
+    text-align:left;
+}
+
+.idea.empty {
+    background:transparent;
+    border:none;
+}
+
+/* Bottom Section */
+.sidebar {
+    background:#d88;
+    padding:20px;
+    border-radius:5px;
+    color:white;
+}
+
+.sidebar ul {
+    list-style:none;
+    padding:0;
+}
+
+.sidebar a {
+    color:white;
+    text-decoration:underline; /* underline links */
+}
+
+/* Titles 2x2 Grid */
+.title-grid {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap:20px;
+    padding:10px;
+}
+
+.title-card {
+    background:#336699;
+    padding:15px;
+    border-radius:5px;
+    color:white;
+    text-align:center;
+}
+
+/* Galleries 3x2 Grid */
+.gallery-grid {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap:20px;
+    padding:10px;
+}
+
+.gallery-card {
+    background:#89a;
+    padding:15px;
+    border-radius:5px;
+    color:white;
+    text-align:center;
+}
+
+/* Footer */
+#main-footer {
+    background:#d88;
+    color:white;
+    text-align:center;
+    padding:10px;
+    border-radius:5px;
+    margin-top:20px;
+}
+
+#main-footer a {
+    color:white;
+    text-decoration:underline; /* underline footer link */
+}
+
+/* Large screens */
+@media only screen and (min-width:768px) {
+    body {
+        background:url(images/background.jpg);
+        background-size:cover;
+    }
+
+    #content {
+        width:70%;
+    }
+
+    .columns {
+        display:flex;
+    }
+
+    .one {
+        flex:1;
+    }
+
+    .two {
+        flex:2;
+    }
+
+    .three {
+        flex:3;
+    }
+
+    .four {
+        flex:4;
+    }
+
+    .five {
+        flex:5;
+    }
+
+    #main-nav li {
+        flex:1;
+        border:none;
+    }
+
+    #main-nav a {
+        text-align:center;
+        padding:5px;
+    }
+}
+
+/* Small screens */
+@media only screen and (max-width:767px) {
+    /* Top ideas: one idea per row */
+    #top-ideas {
+        display:block;
+    }
+
+    .idea {
+        flex:1 1 100%;
+        display:flex;
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .idea-img img {
+        width:100%;
+        height:auto;
+    }
+
+    /* Bottom section stacks */
+    #bottom-section {
+        display:block;
+    }
+
+    .title-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        margin-bottom:20px;
+    }
+}
