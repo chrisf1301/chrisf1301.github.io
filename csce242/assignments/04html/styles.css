@@ -64,6 +64,7 @@
     background:rgba(0,0,0,0.6);
     color:white;
     padding:10px;
+    font-size:1.5rem;
   }
   
   /* Intro */
@@ -180,13 +181,28 @@
     margin-top:1rem;
   }
   
-  /* Responsive */
+  /* Responsive (Small Screens) */
   @media only screen and (max-width:768px) {
     .columns {
-      flex-direction:column;
+      flex-direction:column;          /* stack columns */
     }
+  
     #gallery section {
-      width:100%;
+      width:100%;                     /* news cards full width */
+    }
+  
+    #main-nav ul {
+      flex-direction:column;          /* nav items stack */
+      align-items:center;
+    }
+  
+    #main-header {
+      flex-direction:column;          /* top bar stacks */
+      text-align:center;
+    }
+  
+    #showcase p {
+      font-size:1rem;                 /* smaller hero overlay */
     }
   }
   
