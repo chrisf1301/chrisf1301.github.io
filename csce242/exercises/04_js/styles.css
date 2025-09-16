@@ -233,9 +233,21 @@ footer p {
     text-align:center;
 }
 
-.clicked{
-    background:magenta; 
+.clicked {
+    background:magenta;
     color:white;
+}
+
+.happy {
+    background:yellow;
+    color:black;
+    border:2px dotted orange;
+}
+
+.sad {
+    background:navy;
+    color:white;
+    border:2px solid skyblue;
 }
 
 #map {
