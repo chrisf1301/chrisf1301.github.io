@@ -1,0 +1,174 @@
+/* i got the art from https://www.w3schools.com/html/html_css.asp */
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #e8f4f8;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styles */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+header h2 {
+    font-size: 1.5em;
+    color: #7f8c8d;
+    font-weight: normal;
+}
+
+/* Main content */
+main {
+    text-align: center;
+}
+
+/* Draw button */
+#draw-btn {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background 0.3s;
+}
+
+#draw-btn:hover {
+    background: #45a049;
+}
+
+/* Scene container - made bigger */
+#scene-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    background: linear-gradient(to bottom, #87CEEB 0%, #98FB98 100%);
+    border: 2px solid #333;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+/* Simple Cloud */
+.cloud {
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    background: white;
+    border-radius: 30px;
+    opacity: 0.8;
+}
+
+/* Simple Tree */
+.tree {
+    position: absolute;
+    bottom: 0;
+}
+
+.tree-trunk {
+    width: 15px;
+    height: 50px;
+    background: #8B4513;
+    margin: 0 auto;
+}
+
+.tree-leaves {
+    width: 50px;
+    height: 50px;
+    background: #228B22;
+    border-radius: 50%;
+    margin: -25px auto 0;
+}
+
+/* Simple Sun */
+.sun {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: #FFD700;
+    border-radius: 50%;
+}
+
+/* Simple Moon */
+.moon {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: #F0F8FF;
+    border-radius: 50%;
+}
+
+/* Ground */
+.ground {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    background: #90EE90;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+    
+    header h2 {
+        font-size: 1.2em;
+    }
+    
+    .container {
+        padding: 15px;
+    }
+    
+    #scene-container {
+        height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+    
+    header h2 {
+        font-size: 1.1em;
+    }
+    
+    .container {
+        padding: 10px;
+    }
+    
+    #scene-container {
+        height: 300px;
+    }
+}
