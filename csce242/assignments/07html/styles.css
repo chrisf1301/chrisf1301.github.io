@@ -61,7 +61,7 @@ main {
     background: #45a049;
 }
 
-/* Scene container - made bigger */
+
 #scene-container {
     position: relative;
     width: 100%;
@@ -136,7 +136,7 @@ main {
     background: #90EE90;
 }
 
-/* Responsive design */
+
 @media (max-width: 768px) {
     header h1 {
         font-size: 2em;
