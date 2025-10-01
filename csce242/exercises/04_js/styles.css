@@ -370,3 +370,70 @@ footer p {
         display:flex;
     }
 }
+
+/* Dog Grid Layout */
+.dog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+}
+
+.dog-column {
+    background: white;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.dog-column:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.dog-column h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+.dog-image {
+    width: 100%;
+    max-width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.dog-info {
+    text-align: left;
+}
+
+.dog-info p {
+    margin: 8px 0;
+    color: #333;
+}
+
+.dog-info strong {
+    color: var(--primary-color);
+}
+
+/* Responsive design for smaller screens */
+@media only screen and (max-width: 768px) {
+    .dog-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 10px;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .dog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
