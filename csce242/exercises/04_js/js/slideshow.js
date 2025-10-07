@@ -1,11 +1,11 @@
-setInterval(() => {
-    const currentSlide = document.querySelector('#slideshow :not(.hidden)');
-    let nextSlide = currentSlide.nextElementsSibling; 
+setInterval(()=>{
+    const currentSlide = document.querySelector("#slideshow :not(.hidden)");
+    let nextSlide = currentSlide.nextElementSibling;
 
-    if(!nextSlide){ //next slide ==null (i.e. last slide)
-        nextSlide = document.querySelector('#slideshow :first-child');
+    if(!nextSlide){ //next slide == null
+        nextSlide = document.querySelector("#slideshow :first-child");
     }
 
-    currentSlide.classList.add('hidden');  //hide current slide
-    nextSlide.classList.remove('hidden');  //show next slide
-}, 1000);
+    currentSlide.classList.add("hidden");
+    nextSlide.classList.remove("hidden");
+},1000);

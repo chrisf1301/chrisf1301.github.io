@@ -35,20 +35,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const modal = document.getElementById('imageModal');
     const modalImage = document.getElementById('modalImage');
     const closeBtn = document.querySelector('.close');
-    const galleryItems = document.querySelectorAll('.gallery-item');
-    
-    galleryItems.forEach(item => {
-        item.addEventListener('click', function() {
-            const imageSrc = this.getAttribute('data-image');
-            const altText = this.querySelector('img').alt;
-            
-            modalImage.src = imageSrc;
-            modalImage.alt = altText;
-            
-            modal.style.display = 'block';
-            document.body.style.overflow = 'hidden';
-        });
-    });
     
     if (closeBtn) {
         closeBtn.addEventListener('click', function() {
@@ -71,66 +57,62 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    loadActivitiesData();
+    showActivities();
 });
 
-async function loadActivitiesData() {
+const getActivities = async() => {
+    const url = "https://chrisf1301.github.io/csce242/projects/part6/oktoberfest-activities.json";
+    
     try {
-        const jsonUrl = 'https://chrisf1301.github.io/csce242/projects/part6/oktoberfest-activities.json';
-        
-        const response = await fetch(jsonUrl);
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        
-        const activities = await response.json();
-        displayActivities(activities);
-        
-    } catch (error) {
-        console.error('Error loading activities data:', error);
-        const gallery = document.getElementById('activitiesGallery');
-        if (gallery) {
-            gallery.innerHTML = '<div class="error-message"><p>Unable to load activities data. Please check your internet connection and try again.</p></div>';
-        }
+        const response = await fetch(url);
+        return response.json();
+    } catch(error) {
+        console.log("Issue");
     }
-}
+};
 
-function displayActivities(activities) {
-    const gallery = document.getElementById('activitiesGallery');
-    if (!gallery) return;
-    
-    gallery.innerHTML = '';
-    
-    activities.forEach(activity => {
-        const activityElement = createActivityElement(activity);
-        gallery.appendChild(activityElement);
+const showActivities = async() => {
+    const activities = await getActivities();
+    const activitiesSection = document.getElementById("activitiesGallery");
+
+    activities.forEach((activity) => {
+        const div = document.createElement("div");
+        activitiesSection.append(div);
+        div.classList.add("gallery-item");
+        div.setAttribute("data-image", `images/${activity.img_name}`);
+        div.setAttribute("data-title", activity.name);
+        div.setAttribute("data-description", activity.description);
+        div.setAttribute("data-details", `Category: ${activity.category} | Price: ${activity.price_range} | Popularity: ${activity.popularity} | Dietary: ${activity.dietary_options}`);
+
+        const img = document.createElement("img");
+        div.append(img);
+        img.src = `images/${activity.img_name}`;
+        img.alt = activity.name;
+
+        const infoDiv = document.createElement("div");
+        div.append(infoDiv);
+        infoDiv.classList.add("activity-info");
+
+        const h3 = document.createElement("h3");
+        infoDiv.append(h3);
+        h3.innerHTML = activity.name;
+
+        const pCategory = document.createElement("p");
+        infoDiv.append(pCategory);
+        pCategory.innerHTML = activity.category;
+        pCategory.classList.add("category");
+
+        const pPrice = document.createElement("p");
+        infoDiv.append(pPrice);
+        pPrice.innerHTML = activity.price_range;
+        pPrice.classList.add("price");
+
+        const pPopularity = document.createElement("p");
+        infoDiv.append(pPopularity);
+        pPopularity.innerHTML = activity.popularity;
+        pPopularity.classList.add("popularity");
     });
     
-    attachGalleryEventListeners();
-}
-
-function createActivityElement(activity) {
-    const div = document.createElement('div');
-    div.className = 'gallery-item';
-    div.setAttribute('data-image', `images/${activity.img_name}`);
-    div.setAttribute('data-title', activity.name);
-    div.setAttribute('data-description', activity.description);
-    div.setAttribute('data-details', `Category: ${activity.category} | Price: ${activity.price_range} | Popularity: ${activity.popularity} | Dietary: ${activity.dietary_options}`);
-    
-    div.innerHTML = `
-        <img src="images/${activity.img_name}" alt="${activity.name}">
-        <div class="activity-info">
-            <h3>${activity.name}</h3>
-            <p class="category">${activity.category}</p>
-            <p class="price">${activity.price_range}</p>
-            <p class="popularity">${activity.popularity}</p>
-        </div>
-    `;
-    
-    return div;
-}
-
-function attachGalleryEventListeners() {
     const galleryItems = document.querySelectorAll('.gallery-item');
     const modal = document.getElementById('imageModal');
     const modalImage = document.getElementById('modalImage');
@@ -147,4 +129,5 @@ function attachGalleryEventListeners() {
             document.body.style.overflow = 'hidden';
         });
     });
-}
+};
+
