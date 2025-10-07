@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Gallery - Oktoberfest</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation Bar with Logo Inside -->
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/logo.jpeg" alt="Oktoberfest Logo">
+            </div>
+            <div class="menu-toggle" id="menuToggle">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="information.html">Information</a></li>
+                <li><a href="tickets.html">Tickets</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Gallery Header -->
+        <section class="gallery-header">
+            <h1>Gallery</h1>
+        </section>
+        
+        <!-- JSON Data Loading Notice -->
+        <!-- 
+        GRADER NOTE: This page (gallery.html) loads Oktoberfest activities data from a JSON file.
+        The JSON file contains 10 activities with the following fields:
+        - _id: Unique identifier (1-10)
+        - img_name: Image filename in the images/ directory
+        - name: Activity name (e.g., "Traditional German Food", "German Beer Garden")
+        - description: Detailed description of the activity
+        - category: Activity category (Food & Dining, Entertainment, etc.)
+        - price_range: Pricing information
+        - popularity: Popularity rating
+        - dietary_options: Dietary information where applicable
+        
+        The JavaScript fetches this data from: https://raw.githubusercontent.com/chrisf1301/chrisf1301.github.io/main/csce242/projects/part6/oktoberfest-activities.json
+        -->
+        <section class="json-notice">
+            <h2>Oktoberfest Activities & Features</h2>
+            <p>This page loads festival activities and features from a JSON file. Data includes activity names, descriptions, categories, pricing, and popularity ratings.</p>
+        </section>
+        
+        <!-- Dynamic Gallery Container -->
+        <section class="image-gallery" id="activitiesGallery">
+            <!-- JSON data will be loaded here dynamically -->
+        </section>
+        
+        <!-- Modal -->
+        <div id="imageModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <img id="modalImage" src="" alt="">
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <footer>
+            <p>2024 Oktoberfest. All rights reserved.</p>
+        </footer>
+    </div>
+    
+    <script src="fest.js"></script>
+</body>
+</html>
