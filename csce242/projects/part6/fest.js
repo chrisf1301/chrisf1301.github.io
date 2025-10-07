@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 async function loadActivitiesData() {
     try {
-        const jsonUrl = 'https://raw.githubusercontent.com/chrisf1301/chrisf1301.github.io/main/csce242/projects/part6/oktoberfest-activities.json';
+        const jsonUrl = 'https://chrisf1301.github.io/csce242/projects/part6/oktoberfest-activities.json';
         
         const response = await fetch(jsonUrl);
         if (!response.ok) {
