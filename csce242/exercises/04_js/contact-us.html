@@ -41,8 +41,34 @@
                 <section class="one">
                     <h3>Our Location</h3>
                     
+                        <form method="POST" id="contact-form">
+
+                            <input type="hidden" name="access_key" value="155ad374-5f65-44b7-8a02-8735cc8676eb">
+
+                            <p>
+                                <label for="name">Name</label>
+                                <input type="text" name="name" required>
+                            </p>
+
+                            
+                            <p>
+                                <label for="email">Email</label>
+                                <input type="email" name="email" required>
+                            </p>
+                            <p><label for="message">Message</label></p>
+                            <textarea name="message" required></textarea>
+
+                            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                            
+
+                            <p></p><button type="submit">Submit Form</button></p>
+
+                            <div id="contact-result"></div>
+
+                        </form>
                 </section>
             </main>
         </div>
+        <script src="js/contact.js"></script>
     </body>
 </html>

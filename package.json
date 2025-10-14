@@ -1,0 +1,24 @@
+{
+  "name": "chrisf1301.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --watch . --ext html,css,js --exec \"python3 -m http.server 8000\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrisf1301/chrisf1301.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chrisf1301/chrisf1301.github.io/issues"
+  },
+  "homepage": "https://github.com/chrisf1301/chrisf1301.github.io#readme",
+  "dependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
